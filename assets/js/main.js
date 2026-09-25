@@ -42,7 +42,7 @@ letters.forEach((char, i) => {
 });
 /*=============== HOME TYPED JS ===============*/
 const typedHome = new Typed("#home-type", {
-  strings: ["Freelancer", "Web Developer", "Software Developer"],
+  strings: ["Freelancer", "Web Developer", "Software Engineer"],
   typeSpeed: 60,
   backSpeed: 30,
   backDelay: 2000,
