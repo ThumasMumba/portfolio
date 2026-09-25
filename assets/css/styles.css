@@ -91,7 +91,10 @@ label {
   font-size: var(--normal-font-size);
 }
 
-body {
+body,
+html {
+  overflow-x: hidden;
+  width: 100%;
   background-color: var(--body-color);
   color: var(--text-color);
   margin: 0 auto;
@@ -132,7 +135,9 @@ img {
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
   max-width: 1120px;
-  margin-inline: 1rem;
+  margin-inline: auto;
+  width: 100%;
+  padding-inline: 1rem;
 }
 
 .grid {
@@ -944,10 +949,6 @@ img {
 }
 /* For large devices <> */
 @media (width >= 1150px) {
-  .container {
-    margin-inline: auto;
-  }
-
   .section {
     padding-block: 7rem 2rem;
     width: 100%;
@@ -1014,7 +1015,7 @@ img {
     top: 21rem;
   }
   .about__container {
-    grid-template-columns: 580px 380px;
+    grid-template-columns: minmax(0, 580px) minmax(0, 380px);
     justify-content: space-between;
     text-align: initial;
   }
@@ -1085,7 +1086,7 @@ img {
     top: -7.5rem;
   }
   .contact__container {
-    grid-template-columns: 450px 380px;
+    grid-template-columns: minmax(0, 450px) minmax(0, 380px);
     align-items: center;
     padding-bottom: 3rem;
   }
@@ -1099,7 +1100,7 @@ img {
     height: 14rem;
   }
   .footer__container {
-    grid-template-columns: 600px max-content;
+    grid-template-columns: minmax(0, 600px) max-content;
     justify-content: space-between;
   }
   .footer__title {
